@@ -18,46 +18,53 @@
 
 
   Quando eles se cruzarem na rodovia, qual estará mais próximo a cidade de Ribeirão Preto?
-  Resposta: Quando eles se encontrarem, no Quilômetro 76,74 do trajeto, ambos estarão à mesma distância de Ribeirão Preto, mas o carro estará mais próximo de seu destino (Franca);
+  Resposta: Bom, acho que por lógica, quando eles se encontrarem, ambos estarão à mesma distância de Ribeirão Preto, porém algumas outras informações seriam: o carro estará mais próximo de seu destino (Franca). Os veículos estarão nesse momento a aproximadamente 23km de Franca e 76km de Ribeirão Preto (considerando Ribeirão Preto como o ponto de partida (quilômetro 0)).
+
+c) Cheguei primeiramente ao resultado por meio da lógica mesmo haha, mas para obter os números, fiz o processo abaixo:
 
 
+	Sabemos que eles se encontrarão dentro de uma hora, pois o carro está a 110km/h, em um trajeto de 100km;
+	Primeiro vou ajustar a velocidade média do caminhão por conta das duas paradas de 5 minutos, portanto:
 
-
-Primeiro vou ajustar a velocidade média do caminhão por conta das duas paradas de 5 minutos, portanto:
-velocidade caminhão
-      V=Δs/Δt
+Velocidade Caminhão
+      sabendo que V=Δs/Δt
+   
+      Δt = 0.8333333333333334h ou 50 minutos (já que dessa uma hora, ele percorreu por 50 minutos)
+      Δs = Si + v * t
+      Δs = 0 + 80 * 0.8333333333333334
+	Δs = 66.66666666666667km/h (essa seria a velocidade média do caminhão, pois é a distância percorrida em uma hora, levando em conta Si = 0)
     
-      Δt = 0.8333333333333334h ou 50 minutos (Por causa dos 10 min de pedágio)
-    
-      Δs = Si + v.t
-      66.66666666666667km/h (a velocidade média, pois é a distância percorrida em uma hora, levando em conta Si = 0)
-    
 
 
 
-  Caminhão = Sa(t) = Si + (-v)*t
-             Sa(t) = 100 + (-66.66666666666667)*t
+  Caminhão = Sa(t) = Si + v*t (posição em  função do tempo)
+             Sa(t) = 100 + (-66.66666666666667)*t (a velocidade é negativa, pois está partindo do final do trajeto de 100km, em direção oposta)
              Sa(t) = 100 - 33.33333333333333t
 
-  Carro = Sb(t) = si + (-v)*t
-          Sb(t) = 110t
+  Carro = Sb(t) = si + v*t
+          Sb(t) = 0 + 110t
+	    Sb(t) = 110t
 
 
-
-  O encontro ocorre em Te (TEMPO ESTIMADO): Sa(Te) = Sb(Te)
+  O encontro ocorre em Te (TEMPO ESTIMADO), ou seja: Sa(Te) = Sb(Te)
+   Sb(Te) = Sa(Te)
    110Te =  100 - 33.33333333333333Te
    110Te + 33.33333333333333Te =  100
    143.33333333333331Te = 100
    Te = 100/143.33333333333331
-   Te = 0.6976744186046513
+   Te = 0.6976744186046513 (eis aqui o tempo exato em que os veículos se encontrarão, em horas, isso dá cerca de 41 minutos e 51 segundos)
 
 
 
+  E a posição onde ocorrerá o encontro é dado por:
    Sa(0.6976744186046513) = 100 - 33.33333333333333*0.6976744186046513
    Sa(0.6976744186046513) = 100 - 23.255813953488374
    Sa(0.6976744186046513) = 76.7441860465116
 
+ E
 
    Sb(Te)
    Sb(0.6976744186046513) = 110*0.6976744186046513
    Sb(0.6976744186046513) = 76.7441860465116
+
+   Será no quilômetro 76.7441860465116, ou aproximadamente 76,74km do trajeto, partindo de Ribeirão Preto --> Franca
