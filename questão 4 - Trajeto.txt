@@ -1,0 +1,63 @@
+
+4 - Dois veículos (um carro e um caminhão) saem respectivamente de cidades opostas pela mesma rodovia.
+    O carro de Ribeirão Preto em direção a Franca, a uma velocidade constante de 110 km/h
+    e o caminhão de Franca em direção a Ribeirão Preto a uma velocidade constante de 80 km/h.
+    Quando eles se cruzarem na rodovia, qual estará mais próximo a cidade de Ribeirão Preto?  
+
+   
+
+  IMPORTANTE:  
+
+  a)            Considerar a distância de 100km entre a cidade de Ribeirão Preto <-> Franca.  
+
+  b)           Considerar 2 pedágios como obstáculo e que o caminhão leva 5 minutos a mais para passar em cada um deles e o carro possui tag de pedágio (Sem Parar)  
+
+  c)            Explique como chegou no resultado. 
+
+
+
+
+  Quando eles se cruzarem na rodovia, qual estará mais próximo a cidade de Ribeirão Preto?
+  Resposta: Quando eles se encontrarem, no Quilômetro 76,74 do trajeto, ambos estarão à mesma distância de Ribeirão Preto, mas o carro estará mais próximo de seu destino (Franca);
+
+
+
+
+Primeiro vou ajustar a velocidade média do caminhão por conta das duas paradas de 5 minutos, portanto:
+velocidade caminhão
+      V=Δs/Δt
+    
+      Δt = 0.8333333333333334h ou 50 minutos (Por causa dos 10 min de pedágio)
+    
+      Δs = Si + v.t
+      66.66666666666667km/h (a velocidade média, pois é a distância percorrida em uma hora, levando em conta Si = 0)
+    
+
+
+
+  Caminhão = Sa(t) = Si + (-v)*t
+             Sa(t) = 100 + (-66.66666666666667)*t
+             Sa(t) = 100 - 33.33333333333333t
+
+  Carro = Sb(t) = si + (-v)*t
+          Sb(t) = 110t
+
+
+
+  O encontro ocorre em Te (TEMPO ESTIMADO): Sa(Te) = Sb(Te)
+   110Te =  100 - 33.33333333333333Te
+   110Te + 33.33333333333333Te =  100
+   143.33333333333331Te = 100
+   Te = 100/143.33333333333331
+   Te = 0.6976744186046513
+
+
+
+   Sa(0.6976744186046513) = 100 - 33.33333333333333*0.6976744186046513
+   Sa(0.6976744186046513) = 100 - 23.255813953488374
+   Sa(0.6976744186046513) = 76.7441860465116
+
+
+   Sb(Te)
+   Sb(0.6976744186046513) = 110*0.6976744186046513
+   Sb(0.6976744186046513) = 76.7441860465116
